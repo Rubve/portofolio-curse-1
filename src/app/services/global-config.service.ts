@@ -30,7 +30,6 @@ export class GlobalConfigService {
       .get('https://angular-curso-1-default-rtdb.firebaseio.com/team.json')
       .subscribe((res: any) => {
         this.team = res;
-        console.log(this.team);
       });
   }
 }
