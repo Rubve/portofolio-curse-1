@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlobalConfigService } from './services/global-config.service';
+import { ProductsService } from './services/products.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,8 @@ import { GlobalConfigService } from './services/global-config.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(globalConfigService: GlobalConfigService) {}
+  constructor(
+    globalConfigService: GlobalConfigService,
+    productsService: ProductsService
+  ) {}
 }

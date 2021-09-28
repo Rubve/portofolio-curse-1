@@ -2,3 +2,14 @@
 @import 'animate.css/source/_vars.css';
 @import 'animate.css/source/_base.css';
 @import 'animate.css/source/fading_entrances/fadeIn.css';
+
+
+
+
+/*
+  Color del Loading
+*/
+svg path,
+svg rect{
+  fill: black;
+}
