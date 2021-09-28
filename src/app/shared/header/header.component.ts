@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConfigService } from '../../services/global-config.service';
 import { GlobalConfig } from '../../interfaces/global-config.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,15 @@ import { GlobalConfig } from '../../interfaces/global-config.interface';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public service: GlobalConfigService) {}
+  constructor(public service: GlobalConfigService, private router: Router) {}
 
   ngOnInit(): void {}
+
+  findProduct(searchTerm: string) {
+    if (!searchTerm) {
+      return;
+    }
+
+    this.router.navigate(['/search', searchTerm]);
+  }
 }
